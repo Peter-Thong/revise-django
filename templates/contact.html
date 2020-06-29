@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>this is the contact page</h2>
+{% endblock %}
+
+{% block content %}
+<p>{{my_user|title}}, {{phone_number}}, {{my_list}}</p>
+
+<ul>
+    {% for item in my_list %}
+        {% if item == 213 %}
+        <li>{{forloop.counter}}-{{item|add:23}}</li>
+        {% elif item == 'alall'%}
+        <li>not a valid place</li>
+        {% else %}
+        <li>{{forloop.counter}}-{{item}}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
