@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>welcome to blog page</h1>
+{% endblock %}
+
+{% block content %}
+    <h3>{{object.title}} Blog</h3>
+    <h4>Content:</h4>
+    <p>{{object.content}}</p>
+    <h4>Status: active({{object.active}})</h4>
+{% endblock %}
